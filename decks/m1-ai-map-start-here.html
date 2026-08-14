@@ -112,6 +112,11 @@ footer, header, hgroup, main, menu, nav, section {
   .lbl-g{ fill:var(--gray); font-size:17px; }
   .lbl-b{ fill:var(--ink); font-size:23px; font-weight:700; }
   .num{ fill:var(--ink); font-size:24px; font-weight:700; }
+
+  /* section divider slides (style-guide §3a) — base layout hugs the top, force centering */
+  .reveal .slides section.divider{ justify-content:center; align-items:center; }
+  .reveal .slides section.divider h2.t{ order:2; font-size:1.1em; max-width:76%; }
+  .reveal .slides section.divider svg{ order:1; }
 </style>
 </head>
 <body>
@@ -184,6 +189,15 @@ footer, header, hgroup, main, menu, nav, section {
   <div class="pageno">M1&middot;02</div>
 </section>
 
+<!-- ============ DIVIDER — The map is nested, not a list ============ -->
+<section class="divider">
+  <h2 class="t">The map is nested, not a list</h2>
+  <svg viewBox="0 0 1600 900" role="img" aria-label="A set of concentric nested rings, drawn like telescoping picture frames, one smaller ring inside the next, suggesting zooming further into the center.">
+    <image href="../img/decks/m1/divider-1-nested-rings.jpg" x="0" y="0" width="1600" height="900" preserveAspectRatio="xMidYMid meet"/>
+  </svg>
+  <div class="pageno">M1&middot;03</div>
+</section>
+
 <!-- ============ SLIDE 3 — SCENE: zoom-level job analogy ============ -->
 <section>
   <h2 class="t">You already zoom levels when you describe your job</h2>
@@ -191,7 +205,7 @@ footer, header, hgroup, main, menu, nav, section {
   <svg viewBox="0 0 1600 900" role="img" aria-label="A person at a gathering is asked what they do; zooming through a magnifying glass reveals nested, narrowing rings of detail.">
   <image href="../img/decks/m1/zoom-analogy-scene.jpg" x="0" y="0" width="1600" height="900" preserveAspectRatio="xMidYMid meet"/>
 </svg>
-  <div class="pageno">M1&middot;03</div>
+  <div class="pageno">M1&middot;04</div>
 </section>
 
 <!-- ============ SLIDE 4 — AI region ============ -->
@@ -213,7 +227,7 @@ footer, header, hgroup, main, menu, nav, section {
     <text x="550" y="295" text-anchor="middle" class="lbl-sm">ChatGPT</text>
     <text x="550" y="345" text-anchor="middle" class="lbl-g">same circle, almost nothing else in common</text>
   </svg>
-  <div class="pageno">M1&middot;04</div>
+  <div class="pageno">M1&middot;05</div>
 </section>
 
 <!-- ============ SLIDE 5 — ML region ============ -->
@@ -255,7 +269,7 @@ footer, header, hgroup, main, menu, nav, section {
     <text x="810" y="250" text-anchor="middle" class="lbl-b">the pattern, learned</text>
     <text x="810" y="272" text-anchor="middle" class="lbl-g">not hand-written</text>
   </svg>
-  <div class="pageno">M1&middot;05</div>
+  <div class="pageno">M1&middot;06</div>
 </section>
 
 <!-- ============ SLIDE 6 — DL region ============ -->
@@ -303,7 +317,7 @@ footer, header, hgroup, main, menu, nav, section {
     <text x="870" y="235" text-anchor="middle" class="lbl-sm">high-dimensional data</text>
     <text x="870" y="260" text-anchor="middle" class="lbl-g">pixels &middot; audio &middot; raw text</text>
   </svg>
-  <div class="pageno">M1&middot;06</div>
+  <div class="pageno">M1&middot;07</div>
 </section>
 
 <!-- ============ SLIDE 7 — LLM region ============ -->
@@ -344,7 +358,7 @@ footer, header, hgroup, main, menu, nav, section {
     <text x="930" y="197" text-anchor="middle" class="lbl-sm">writes code</text>
     <text x="930" y="219" text-anchor="middle" class="lbl-sm">holds a conversation</text>
   </svg>
-  <div class="pageno">M1&middot;07</div>
+  <div class="pageno">M1&middot;08</div>
 </section>
 
 <!-- ============ SLIDE 8 — full nested map ============ -->
@@ -391,7 +405,7 @@ footer, header, hgroup, main, menu, nav, section {
     <text x="930" y="322" text-anchor="middle" class="lbl-b">LLM</text>
     <text x="930" y="342" text-anchor="middle" class="lbl-g">predicts the next chunk</text>
   </svg>
-  <div class="pageno">M1&middot;08</div>
+  <div class="pageno">M1&middot;09</div>
 </section>
 
 <!-- ============ SLIDE 9 — Agents wrap outward ============ -->
@@ -426,7 +440,7 @@ footer, header, hgroup, main, menu, nav, section {
     <text x="800" y="222" text-anchor="middle" class="lbl-sm">+ memory + a loop</text>
     <text x="800" y="250" text-anchor="middle" class="lbl-g">not a smarter model</text>
   </svg>
-  <div class="pageno">M1&middot;09</div>
+  <div class="pageno">M1&middot;10</div>
 </section>
 
 <!-- ============ SLIDE 10 — same model, different architecture ============ -->
@@ -452,7 +466,7 @@ footer, header, hgroup, main, menu, nav, section {
     <text x="820" y="230" text-anchor="middle" class="lbl-sm">a support bot that files a ticket</text>
     <text x="550" y="320" text-anchor="middle" class="lbl-g">same model underneath, different wrapping</text>
   </svg>
-  <div class="pageno">M1&middot;10</div>
+  <div class="pageno">M1&middot;11</div>
 </section>
 
 <!-- ============ SLIDE 11 — the region decides the question ============ -->
@@ -488,7 +502,16 @@ footer, header, hgroup, main, menu, nav, section {
     <text x="210" y="278" text-anchor="start" class="lbl-b">Agent region</text>
     <text x="420" y="278" text-anchor="start" class="lbl-sm">&rarr; "what tools, what if it calls the wrong one?"</text>
   </svg>
-  <div class="pageno">M1&middot;11</div>
+  <div class="pageno">M1&middot;12</div>
+</section>
+
+<!-- ============ DIVIDER — The vendor-call test ============ -->
+<section class="divider">
+  <h2 class="t">The vendor-call test</h2>
+  <svg viewBox="0 0 1600 900" role="img" aria-label="A person at a desk holds a phone to their ear mid vendor pitch call, with a few blank pitch cards floating nearby.">
+    <image href="../img/decks/m1/divider-2-vendor-call.jpg" x="0" y="0" width="1600" height="900" preserveAspectRatio="xMidYMid meet"/>
+  </svg>
+  <div class="pageno">M1&middot;13</div>
 </section>
 
 <!-- ============ SLIDE 12 — vendor-call test ============ -->
@@ -531,7 +554,7 @@ footer, header, hgroup, main, menu, nav, section {
     <text x="150" y="337" text-anchor="start" class="lbl-b">"an autonomous agent" &rarr; Agent</text>
     <text x="150" y="367" text-anchor="start" class="lbl-g">ask: what tools, who's accountable</text>
   </svg>
-  <div class="pageno">M1&middot;12</div>
+  <div class="pageno">M1&middot;14</div>
 </section>
 
 <!-- ============ SLIDE 13 — not new, but unavoidable ============ -->
@@ -559,7 +582,16 @@ footer, header, hgroup, main, menu, nav, section {
     <text x="825" y="135" text-anchor="middle" class="lbl-b">in one product</text>
     <text x="825" y="165" text-anchor="middle" class="lbl-g">unavoidable in every AI conversation</text>
   </svg>
-  <div class="pageno">M1&middot;13</div>
+  <div class="pageno">M1&middot;15</div>
+</section>
+
+<!-- ============ DIVIDER — The four projects you'll build ============ -->
+<section class="divider">
+  <h2 class="t">The four projects you'll build</h2>
+  <svg viewBox="0 0 1600 900" role="img" aria-label="Four rounded building blocks stacked together, with a fourth block being placed onto the growing stack.">
+    <image href="../img/decks/m1/divider-3-four-projects.jpg" x="0" y="0" width="1600" height="900" preserveAspectRatio="xMidYMid meet"/>
+  </svg>
+  <div class="pageno">M1&middot;16</div>
 </section>
 
 <!-- ============ SLIDE 14 — four projects tour ============ -->
@@ -608,7 +640,7 @@ footer, header, hgroup, main, menu, nav, section {
     <text x="150" y="327" text-anchor="start" class="lbl-g">reasons in steps, calls tools</text>
     <text x="990" y="313" text-anchor="end" class="lbl-sm">(M6)</text>
   </svg>
-  <div class="pageno">M1&middot;14</div>
+  <div class="pageno">M1&middot;17</div>
 </section>
 
 <!-- ============ SLIDE 15 — capstone convergence ============ -->
@@ -641,7 +673,7 @@ footer, header, hgroup, main, menu, nav, section {
     <text x="550" y="278" text-anchor="middle" class="lbl-sm">(Module 9)</text>
     <text x="550" y="330" text-anchor="middle" class="lbl-g">you run it, you break it, you demo it</text>
   </svg>
-  <div class="pageno">M1&middot;15</div>
+  <div class="pageno">M1&middot;18</div>
 </section>
 
 <!-- ============ SLIDE 16 — closing ============ -->
@@ -693,7 +725,7 @@ footer, header, hgroup, main, menu, nav, section {
     <image href="../img/decks/m1/closing-signpost-laptop.jpg" x="820" y="48" width="720" height="405" preserveAspectRatio="xMidYMid meet"/>
   </svg>
   <p class="credit">Now open <b>Module 1 &middot; Lab</b>. &nbsp;&middot;&nbsp; <b>Gourav Shah</b> &middot; School of DevOps &amp; AI</p>
-  <div class="pageno">M1&middot;16</div>
+  <div class="pageno">M1&middot;19</div>
 </section>
 
 </div></div>
@@ -732,7 +764,7 @@ footer, header, hgroup, main, menu, nav, section {
       if(!sec) return;
       var svg = sec.querySelector('svg');
       if(!svg) return;
-      var mh = 58;
+      var mh = sec.classList.contains('divider') ? 80 : 58;
       svg.style.maxHeight = mh + '%';
       var guard = 0;
       while (sec.scrollHeight > sec.clientHeight + 2 && mh > 18 && guard++ < 20){
